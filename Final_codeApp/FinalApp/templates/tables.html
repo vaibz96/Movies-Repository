@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>{{title}}</h1>
+
+<h2>{{table_header}}</h2>
+
+<table border = '1'>
+    <th>Movies</th>
+    <th>Time</th>
+    <th>Tickets</th>
+    {% for movie in movies_summary %}
+        <tr>
+            <td>{{movie.movie}}</td>
+            <td>{{movie.time}}</td>
+            <td>{{movie.tickets}}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
